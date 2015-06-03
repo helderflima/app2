@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block titulo %}{{artigo.titulo|safe}}{% endblock %}
+{% block conteudo %}
+<article>
+    <header>
+        <h1>{{artigo.titulo|safe}}</h1>
+        <di>
+            <time pubdate>{{artigo.pub_date}}</time> <address>Por <a rel="author" href="#">{{artigos.autores.all}}</a></address>
+        </di>
+    </header>
+    <div>
+        <p>
+            {{artigo.conteudo|safe}}
+        </p>
+    </div>
+</article>
+{% endblock %}
+{% block voltar %}
+    <a href="/">Voltar</a>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    {% if artigos %}
+        <ul>
+            {% for artigo in artigos %}
+                <li>
+                    <h1><a href="/artigo/{{artigo.url}}">{{artigo.titulo|safe}}</a></h1>
+                    <br/>
+                    <span>{{artigo.pub_date}}</span>
+                    <di>
+                        <p>{{artigo.conteudo|safe}}</p>
+                    </di>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há artigos!</p>
+    {% endif %}
+{% endblock %}

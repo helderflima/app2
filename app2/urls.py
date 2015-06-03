@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^$', ola),
     url(r'^ola/$', ola),
     url(r'^data_atual/$', data_atual),
-    url(r'^admin/$', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 ]
