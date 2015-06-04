@@ -17,4 +17,18 @@
     {% else %}
         <p>Não há artigos!</p>
     {% endif %}
+
+<!-- PAGINATOR -->
+    {% if paginacao.has_previous %}
+        <a href="/paginacao/{{paginacao.previous_page_number}}">« Anterior </a>
+    {% else %}
+        « Anterior
+    {% endif %}
+    | página {{paginacao.number}} de {{paginacao.num_pages}} |
+    {% if paginacao.has_next %}
+        <a href="/paginacao/{{paginacao.next_page_number}}">Próximo »</a>
+    {% else %}
+        Próximo »
+    {% endif %}
+<!-- PAGINATOR -->
 {% endblock %}

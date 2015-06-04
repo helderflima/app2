@@ -56,7 +56,10 @@ ROOT_URLCONF = 'app2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'C:/github/app2/templates',
+            'C:/github/app2/artigos/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,8 +105,4 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
-    'C:/github/app2/templates',
-    'C:/github/app2/artigos/templates',
-)
 
