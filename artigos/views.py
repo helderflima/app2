@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from artigos.models import Artigo, Autor, Agencia
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 # Create your views here.
@@ -27,3 +27,15 @@ def artigo(request, url):
     })
 
 
+def form_pesquisa(request):
+    return render(request,  'search_form.html')
+
+
+def pesquisa(request):
+    if 'q' in request.GET and request.GET['q']:
+        q = request.GET['q']
+        artigos = Artigo.objects.filter(titulo__contains=q) | Artigo.objects.filter(conteudo__contains=q)
+        return render(request, 'search_results.html',
+            {'artigos': artigos, 'query': q})
+    else:
+        return render(request, 'search_form.html', {'erro': True})
