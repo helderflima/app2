@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, HttpResponse
 from artigos.models import Artigo, Autor, Agencia
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.core.mail import send_mail
+from artigos.forms import FormContato
 # Create your views here.
 
 
@@ -39,3 +41,22 @@ def pesquisa(request):
             {'artigos': artigos, 'query': q})
     else:
         return render(request, 'search_form.html', {'erro': True})
+
+
+def contato(request):
+    if request.method == "POST":
+        form = FormContato(request.POST)
+        if form.is_valid():
+            email = ['helder.fl@hotmail.com']
+            remetente = form.cleaned_data['email']
+            assunto = "Contato - " + form.cleaned_data['nome']
+            mensagem = "Telefone: " + form.cleaned_data['telefone'] + "<br/>" + form.cleaned_data['mensagem']
+            send_mail(assunto, mensagem, remetente, email)
+
+            return render(request, 'contact.html', {"form": FormContato(), "send": True})
+    else:
+        form = FormContato()
+
+    return render(request, 'contact.html', {
+        "form": form
+    })
