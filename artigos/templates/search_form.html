@@ -4,11 +4,14 @@
     {% if erro %}
         <p style="color: red;">Por favor, informe um termo para a pesquisa!</p>
     {% endif %}
+    <div class="form-horizontal">
     <form action="/pesquisa/" method="get">
-        <input type="text" placeholder="Informe um texto" name="q">
-        <input type="submit" value="Pesquisar">
+        <div class="form-group">
+            <input class="form-control col-md-10" type="text" placeholder="Informe um texto" name="q" />
+        </div>
+        <div class="col-md-offset-3 col-md-10 lead">
+            <button type="submit" class="btn btn-primary lead">Pesquisar</button>
+        </div>
     </form>
-{% endblock %}
-{% block voltar %}
-<a href="/">Voltar</a>
+</div>
 {% endblock %}

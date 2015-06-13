@@ -1,34 +1,32 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-    {% if artigos %}
-        <ul>
-            {% for artigo in artigos %}
-                <li>
-                    <h1><a href="/artigo/{{artigo.url}}">{{artigo.titulo|safe}}</a></h1>
-                    <br/>
-                    <span>{{artigo.pub_date}}</span>
-                    <di>
-                        <p>{{artigo.conteudo|safe}}</p>
-                    </di>
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Não há artigos!</p>
-    {% endif %}
+  {% if artigos %}
+      {% for artigo in artigos %}
+        <div class="blog-post">
+            <h2 class="blog-post-title"><a href="/artigo/{{artigo.url}}">{{artigo.titulo|safe}}</a></h2>
+            <p class="blog-post-meta">{{artigo.pub_date}}</p>
+            <div>
+              <p>{{artigo.conteudo|safe}}</p>
+            </div>
+        </div>
+      {% endfor %}
+  {% else %}
+    <p>Não há artigos</p>
+  {% endif %}
 
-<!-- PAGINATOR -->
+  <!-- PAGINADOR -->
+  <ul class="pager">
     {% if paginacao.has_previous %}
-        <a href="/paginacao/{{paginacao.previous_page_number}}">« Anterior </a>
+      <li><a href="/paginacao/{{paginacao.previous_page_number}}">« Anterior</a></li>
     {% else %}
-        « Anterior
+      <li class="disabled"><a href="#">« Anterior</a></li>
     {% endif %}
-    | página {{paginacao.number}} de {{paginacao.num_pages}} |
     {% if paginacao.has_next %}
-        <a href="/paginacao/{{paginacao.next_page_number}}">Próximo »</a>
+      <li><a href="/paginacao/{{ paginacao.next_page_number }}">Próximo »</a></li>
     {% else %}
-        Próximo »
+      <li class="disabled"><a href="#">Próximo »</a></li>
     {% endif %}
-<!-- PAGINATOR -->
+  </ul>
+  <!-- PAGINADOR -->
 {% endblock %}

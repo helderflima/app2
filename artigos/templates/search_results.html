@@ -1,26 +1,20 @@
 {% extends 'base.html' %}
-
+{% block titulo %}Resultado da pesquisa{% endblock %}
 {% block conteudo %}
-    <p>Você pesquisou por: <strong>{{query}}</strong></p>
-        {% if artigos %}
-        <p>Encontrado {{artigos|length}} artigo{{artigos|pluralize}}.</p>
-        <ul>
-            {% for artigo in artigos %}
-                <hr>
-                <li>
-                    <h1><a href="/artigo/{{artigo.url}}">{{artigo.titulo|safe}}</a></h1>
-                    <br>
-                    <span>{{artigo.pub_date}}</span>
-                    <div>
-                        <p>{{artigo.conteudo|safe}}</p>
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
-        {% else %}
-            <p>Não há artigos relacionados a sua busca.</p>
-        {% endif %}
-{% endblock %}
-{% block voltar %}
-    <a href="/">Voltar</a>
+    <h3>Você pesquisou por: <strong>{{ query }}</strong></h3>
+    {% if artigos %}
+    <h3>Encontrado {{ artigos|length }} artigo{{ artigos|pluralize }}.</h3>
+    <hr />
+      {% for artigo in artigos %}
+        <div class="blog-post">
+            <h2 class="blog-post-title"><a href="/artigo/{{artigo.url}}">{{artigo.titulo|safe}}</a></h2>
+            <p class="blog-post-meta">{{artigo.pub_date}}</p>
+            <div>
+              <p>{{artigo.conteudo|safe}}</p>
+            </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>Não há artigos relacionados a sua busca.</p>
+    {% endif %}
 {% endblock %}

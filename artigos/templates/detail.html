@@ -3,18 +3,13 @@
 {% block conteudo %}
 <article>
     <header>
-        <h1>{{artigo.titulo|safe}}</h1>
-        <di>
-            <time pubdate>{{artigo.pub_date}}</time> <address>Por <a rel="author" href="#">{{artigos.autores.all}}</a></address>
-        </di>
+        <h2>{{artigo.titulo|safe}}</h2>
+        <p class="blog-post-meta">
+            <time pubdate>{{artigo.pub_date}}</time> Por <a rel="author" href="#">{{artigo.autores}}</a> de {{artigo.agencia}}
+        </p>
     </header>
     <div>
-        <p>
-            {{artigo.conteudo|safe}}
-        </p>
+    <p>{{artigo.conteudo|safe}}</p>
     </div>
 </article>
-{% endblock %}
-{% block voltar %}
-    <a href="/">Voltar</a>
 {% endblock %}

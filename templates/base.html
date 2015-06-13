@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8" />
     <title>{% block titulo %}Exemplo em Django{% endblock %}</title>
-</head>
-<body>
+    {% block style %}
+    <link rel="stylesheet" type="text/css" href="/media/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/media/css/blog.css"/>
+  {% endblock style %}
+
+  {% block scripts %}
+    <script src="/media/js/bootstrap.min.js"></script>
+    <script src="/media/js/jquery-2.1.0.min.js"></script>
+  {% endblock scripts %}
+  </head>
+  <body>
     {% block menu %}
-        <a href="/">Home</a> |
-        <a href="/contato/">Contato</a> |
-        <a href="/rss/artigos/">RSS</a>
-    <hr/>
+    <div class="blog-masthead" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <nav class="blog-nav">
+            <a class="blog-nav-item active" href="/">Home</a>
+            <a class="blog-nav-item" href="/contato/">Contato</a>
+            <a class="blog-nav-item" href="/rss/artigos/">RSS</a>
+          </nav>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form" action="/pesquisa/" method="get">
+            <div class="form-group">
+              <input type="text" placeholder="Pesquisa" class="form-control" name="q">
+            </div>
+            <button type="submit" class="btn btn-success">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
     {% endblock %}
-    {% block conteudo %}{% endblock %}
-    {% block voltar %}{% endblock %}
-</body>
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Site de Exemplo</h1>
+        <p class="lead blog-description">Exemplo do curso de Django do Treinaweb.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+          {% block conteudo %}{% endblock %}
+          {% block voltar %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
