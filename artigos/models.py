@@ -31,3 +31,12 @@ class Artigo(models.Model):
     conteudo = models.TextField('Conteúdo da página')
     autores = models.ManyToManyField(Autor)
     agencia = models.ForeignKey(Agencia)
+
+    def __str__(self):
+        return self.titulo
+
+    class Meta:
+        ordering = ['-pub_date']
+
+
+

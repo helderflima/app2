@@ -1,7 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from artigos.views import *
-from app2.views import ola, data_atual
+from artigos.feeds import ArtigosRss
 
 urlpatterns = [
     # Examples:
@@ -15,4 +14,5 @@ urlpatterns = [
     url(r'^pesquisa/$', 'artigos.views.pesquisa'),
     url(r'^contato', 'artigos.views.contato'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^rss/(?P<url>.*)', ArtigosRss()),
 ]
