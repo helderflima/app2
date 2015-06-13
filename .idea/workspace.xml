@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59dff696-79fe-4bb9-ac2d-8c204f5a2551" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/artigos/feeds.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artigos/models.py" afterPath="$PROJECT_DIR$/artigos/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app2/settings.py" afterPath="$PROJECT_DIR$/app2/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app2/urls.py" afterPath="$PROJECT_DIR$/app2/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="59dff696-79fe-4bb9-ac2d-8c204f5a2551" name="Default" comment="" />
     <ignored path="app2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
