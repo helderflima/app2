@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block titulo %}Contato{% endblock %}
+{% block conteudo %}
+    <h1>Contato</h1>
+    {% if form.errors %}
+        <p style="color: red;">
+            Corrija o{{form.errors|pluralize}} erro{{form.errors|pluralize}} abaixo.
+        </p>
+    {% endif %}
+    {% if send %}
+        <p style="color: red;">
+            E-mail enviado com sucesso. Em breve entraremos em contato!
+        </p>
+    {% endif %}
+    <form action="/contato/" method="post">{% csrf_token %}
+        {% for field in form %}
+            <div class="field">
+                <label for="{{field.id}}">{{field.label_tag}}</label> {{field}} <div class="errors">{{field.errors}}</div>
+            </div>
+        {% endfor %}
+        <p><input type="submit" value="Enviar mensagem"></p>
+    </form>
+{% endblock %}
+{% block voltar %}
+    <a href="/">Voltar</a>
+{% endblock %}

@@ -5,6 +5,11 @@
     <title>{% block titulo %}Exemplo em Django{% endblock %}</title>
 </head>
 <body>
+    {% block menu %}
+        <a href="/">Home</a> |
+        <a href="/contato/">Contato</a>
+    <hr/>
+    {% endblock %}
     {% block conteudo %}{% endblock %}
     {% block voltar %}{% endblock %}
 </body>

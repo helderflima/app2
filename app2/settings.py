@@ -106,3 +106,11 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 
+# Configuração de contato de email.
+#EMAIL_USE_TLS = False
+#EMAIL_HOST =
+#EMAIL_POST = 587
+#EMAIL_HOST_USER =
+#EMAIL_HOST_PASSWORD =
+
+

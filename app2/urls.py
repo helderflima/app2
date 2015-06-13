@@ -13,7 +13,6 @@ urlpatterns = [
     url(r'^artigo/(?P<url>[^\.]+)', 'artigos.views.artigo'),
     url(r'^form-pesquisa/$', 'artigos.views.form_pesquisa'),
     url(r'^pesquisa/$', 'artigos.views.pesquisa'),
-    url(r'^ola/$', ola),
-    url(r'^data_atual/$', data_atual),
+    url(r'^contato', 'artigos.views.contato'),
     url(r'^admin/', include(admin.site.urls)),
 ]
