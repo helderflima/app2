@@ -1,6 +1,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from artigos.feeds import ArtigosRss
+from django.conf import settings
 
 urlpatterns = [
     # Examples:
@@ -15,4 +16,5 @@ urlpatterns = [
     url(r'^contato', 'artigos.views.contato'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rss/(?P<url>.*)', ArtigosRss()),
+    url(r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 ]
