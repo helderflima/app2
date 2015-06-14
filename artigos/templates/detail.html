@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load artigos_extras %}
 {% block titulo %}{{artigo.titulo|safe}}{% endblock %}
 {% block conteudo %}
 <article>
     <header>
         <h2>{{artigo.titulo|safe}}</h2>
         <p class="blog-post-meta">
-            <time pubdate>{{artigo.pub_date}}</time> Por <a rel="author" href="#">{{artigo.autores}}</a> de {{artigo.agencia}}
+            <time pubdate>{{artigo.pub_date}}</time> Por <a rel="author" href="#">{{artigo.autores|autores}}</a> de {{artigo.agencia}}
         </p>
     </header>
     <div>
