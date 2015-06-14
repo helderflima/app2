@@ -44,6 +44,7 @@
         {% get_comment_form for artigo as form %}
         <form role="form" class="form-horizontal" method="post" action="{% comment_form_target %}">
             {% csrf_token %}
+            <input type="hidden" name="next" value="/artigo/{{artigo.url}}" />
             {% for field in form %}
             {% if field.is_hidden %}
               {{field}}
