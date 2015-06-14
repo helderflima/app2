@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'artigos',
+    'django.contrib.flatpages',
+    'django.contrib.sites',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -51,6 +53,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'app2.urls'
@@ -114,5 +117,7 @@ EMAIL_HOST = 'smtp.live.com'
 EMAIL_POST = 465
 EMAIL_HOST_USER = 'helder.fl@hotmail.com'
 EMAIL_HOST_PASSWORD = ''
+
+SITE_ID = 1
 
 
