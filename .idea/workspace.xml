@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="59dff696-79fe-4bb9-ac2d-8c204f5a2551" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artigos/templatetags/artigos_extras.py" afterPath="$PROJECT_DIR$/artigos/templatetags/artigos_extras.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artigos/templates/detail.html" afterPath="$PROJECT_DIR$/artigos/templates/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app2/settings.py" afterPath="$PROJECT_DIR$/app2/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app2/urls.py" afterPath="$PROJECT_DIR$/app2/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="app2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app2/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="724" max-vertical-offset="2227">
-              <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.67979455" vertical-offset="1643" max-vertical-offset="2227">
+              <caret line="120" column="23" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -115,20 +113,18 @@
       <file leaf-file-name="artigos_extras.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/artigos/templatetags/artigos_extras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="32" />
-              <folding>
-                <element signature="e#22#49#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+              <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/artigos/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63978493" vertical-offset="0" max-vertical-offset="558">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state vertical-scroll-proportion="-29.307692" vertical-offset="309" max-vertical-offset="1241">
+              <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -152,12 +148,12 @@
         <option value="$PROJECT_DIR$/artigos/templates/search_results.html" />
         <option value="$PROJECT_DIR$/artigos/templates/index.html" />
         <option value="$PROJECT_DIR$/artigos/templatetags/__init__.py" />
-        <option value="$PROJECT_DIR$/artigos/templatetags/artigos_extras.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/app2/settings.py" />
         <option value="$PROJECT_DIR$/app2/urls.py" />
         <option value="$PROJECT_DIR$/templates/flatpages/default.html" />
+        <option value="$PROJECT_DIR$/artigos/templatetags/artigos_extras.py" />
         <option value="$PROJECT_DIR$/artigos/templates/detail.html" />
+        <option value="$PROJECT_DIR$/app2/settings.py" />
       </list>
     </option>
   </component>
@@ -251,6 +247,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="artigos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artigos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatetags" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -669,28 +683,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/artigos/templatetags/artigos_extras.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#22#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="1071">
           <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app2/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="724" max-vertical-offset="2227">
-          <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -713,10 +709,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/artigos/templatetags/artigos_extras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/artigos/templates/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63978493" vertical-offset="0" max-vertical-offset="558">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state vertical-scroll-proportion="-29.307692" vertical-offset="309" max-vertical-offset="1241">
+          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app2/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67979455" vertical-offset="1643" max-vertical-offset="2227">
+          <caret line="120" column="23" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
           <folding />
         </state>
       </provider>

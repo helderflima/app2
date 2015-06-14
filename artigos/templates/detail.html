@@ -14,9 +14,55 @@
     <p>{{artigo.conteudo|safe}}</p>
     </div>
 </article>
-<div id="comments" class="comments-area">
-    <div id="respond" class="comments-respond">
-        {% render_comment_form for artigo %}
+<hr/>
+<div class="panel panel-default">
+    <div class="panel-heading">Comentários</div>
+    <div class="panel-body">
+        <ul class="list-group">
+        {% get_comment_list for artigo as comment_list %}
+        {% for comentario in comment_list %}
+          <li class="list-group-item">
+            <h6 class="list-group-item-heading">
+              {% if comentario.url %}
+                <a href="{{ comentario.url }}"> {{comentario.name}}</a>
+              {% else %}
+                {{comentario.name}}
+              {% endif %}
+              <p><small>
+                <time>{{comentario.submit_date}}</time>
+              </small></p>
+            </h6>
+            <small>
+              <p>{{comentario.comment}}
+            </small>
+          </li>
+        {% endfor %}
+        </ul>
     </div>
+    <div class="panel-footer">
+        <h5>Envie seu comentário:</h5>
+        {% get_comment_form for artigo as form %}
+        <form role="form" class="form-horizontal" method="post" action="{% comment_form_target %}">
+            {% csrf_token %}
+            {% for field in form %}
+            {% if field.is_hidden %}
+              {{field}}
+            {% else %}
+              <div class="form-group"
+              {% ifequal field.name "honeypot" %}
+                style="display:none;"
+              {% endifequal %}
+              >
+              <div class="col-sm-8">
+                {{field|add_class:"form-control input-sm"|add_placeholder:field.label}}
+              </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+          <div class="col-md-offset-3">
+            <button id="submit" class="btn btn-primary" type="submit" name="submit">Comentar</button>
+          </div>
+        </form>
+  </div>
 </div>
 {% endblock %}
