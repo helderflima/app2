@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load artigos_extras %}
+{% load comments %}
 {% block titulo %}{{artigo.titulo|safe}}{% endblock %}
 {% block conteudo %}
 <article>
@@ -13,4 +14,9 @@
     <p>{{artigo.conteudo|safe}}</p>
     </div>
 </article>
+<div id="comments" class="comments-area">
+    <div id="respond" class="comments-respond">
+        {% render_comment_form for artigo %}
+    </div>
+</div>
 {% endblock %}

@@ -17,4 +17,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rss/(?P<url>.*)', ArtigosRss()),
     url(r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    url(r'^comments/', include('django_comments.urls')),
 ]

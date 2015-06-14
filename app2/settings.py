@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'artigos',
     'django.contrib.flatpages',
     'django.contrib.sites',
+    'django_comments',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -64,6 +65,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'artigos/templates'),
+            os.path.join(BASE_DIR, 'django_comments/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
